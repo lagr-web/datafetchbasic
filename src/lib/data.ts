@@ -1,31 +1,25 @@
-export async function getQueryData(id:string){
+//src/lib/data.ts
 
-    try{
+export async function getQueryData(id: string) {
 
-        const res = await fetch(`https://dummyjson.com/products/${id}`);
+    const res = await fetch(`https://dummyjson.com/products/${id}`);
 
-        if(!res.ok) throw new Error("failed");
-    
-        return res.json();
+    if (!res.ok) throw new Error("failed");
 
-    }catch(error){
-
-        console.log(error);
-
-    } 
+    return res.json();
 
 }
 
 
-export const getAllData = async ()=> {
+export const getAllData = async () => {
 
     const res = await fetch('https://dummyjson.com/products');
-    
-    if(!res.ok) throw new Error('failed');
-    
+
+    if (!res.ok) throw new Error('failed');
+
     return res.json();
-    
-    
-    }
+
+
+}
 
 
