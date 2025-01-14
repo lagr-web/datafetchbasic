@@ -12,10 +12,7 @@ export async function getQueryData(id:string){
 
         console.log(error);
 
-
-    }
-
-   
+    } 
 
 }
 

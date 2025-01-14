@@ -3,7 +3,6 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { getAllData } from "@/lib/data";
 
-
 export default async function Home() {
 
   const data = await getAllData();
@@ -15,8 +14,7 @@ export default async function Home() {
     {data &&
 
        data.products.map( (item:any)=>(
-
-        <>
+        
         <div>
           <Link
            href={{
@@ -30,8 +28,6 @@ export default async function Home() {
 
         </div>
         
-        </>
-
 
        ) )
 

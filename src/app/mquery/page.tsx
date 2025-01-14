@@ -1,10 +1,16 @@
 import { getQueryData } from "@/lib/data";
 
-const page = async(props: { searchParams: Promise<{ id: string }> })  => {
+interface PageProps {
 
-//const page = async ({ searchParams }: { searchParams: { id: string }}) => {
+    searchParams: Promise<{ id: string }>;
+}
 
-const { id } = await props.searchParams;
+
+const page = async (props: PageProps) => {
+
+    //const page = async ({ searchParams }: { searchParams: { id: string }}) => {
+
+    const { id } = await props.searchParams;
 
     const data = await getQueryData(id);
 
